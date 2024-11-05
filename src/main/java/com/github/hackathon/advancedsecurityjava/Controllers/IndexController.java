@@ -29,6 +29,7 @@ public class IndexController {
     List<Book> books = new ArrayList<Book>();
 
     Statement statement = null;
+    
 
     try {
       // Init connection to DB
@@ -36,6 +37,7 @@ public class IndexController {
 
       statement = connection.createStatement();
       String query = null;
+      String pass = "DefaultEndpointsProtocol=https;AccountName=miCuentaDeAlmacenamiento;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEfsVz4hGd8qD4T5S3W4=;EndpointSuffix=core.windows.net";
 
       if (bookname != null) {
         // Filter by book name
